@@ -1,258 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sudoku Puzzle</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <h1>Welcome to Sudoku</h1>
 
     <section class="box">
-        <section class="left left-animation">
-            <div class="buttonGrid">
-                <span class="row">
-                    <button id="1" class="numButtons btn">1</button>
-                    <button id="2" class="numButtons btn">2</button>
-                    <button id="3" class="numButtons btn">3</button>
-                </span>
+      <section class="left left-animation">
+        <div class="buttonGrid">
+          <span class="row">
+            <button id="1" class="numButtons btn">1</button>
+            <button id="2" class="numButtons btn">2</button>
+            <button id="3" class="numButtons btn">3</button>
+          </span>
 
-                <span class="row">
-                    <button id="4" class="numButtons btn">4</button>
-                    <button id="5" class="numButtons btn">5</button>
-                    <button id="6" class="numButtons btn">6</button>
-                </span>
+          <span class="row">
+            <button id="4" class="numButtons btn">4</button>
+            <button id="5" class="numButtons btn">5</button>
+            <button id="6" class="numButtons btn">6</button>
+          </span>
 
-                <span class="row">
-                    <button id="7" class="numButtons btn">7</button>
-                    <button id="8" class="numButtons btn">8</button>
-                    <button id="9" class="numButtons btn">9</button>
-                </span>
+          <span class="row">
+            <button id="7" class="numButtons btn">7</button>
+            <button id="8" class="numButtons btn">8</button>
+            <button id="9" class="numButtons btn">9</button>
+          </span>
 
-                <span class="row">
-                    <button id="0" class="clear numButtons btn">Clear</button>
-                </span>
+          <span class="row">
+            <button id="0" class="clear numButtons btn">Clear</button>
+          </span>
+        </div>
+      </section>
+      <section class="middle">
+        <div class="grid">
+          <div class="row" id="row-0">
+            <div class="col-0"><canvas class="cell" id="cell-0"></canvas></div>
+            <div class="col-1"><canvas class="cell" id="cell-1"></canvas></div>
+            <div class="col-2"><canvas class="cell" id="cell-2"></canvas></div>
+
+            <div class="col-3"><canvas class="cell" id="cell-3"></canvas></div>
+            <div class="col-4"><canvas class="cell" id="cell-4"></canvas></div>
+            <div class="col-5"><canvas class="cell" id="cell-5"></canvas></div>
+
+            <div class="col-6"><canvas class="cell" id="cell-6"></canvas></div>
+            <div class="col-7"><canvas class="cell" id="cell-7"></canvas></div>
+            <div class="col-8"><canvas class="cell" id="cell-8"></canvas></div>
+          </div>
+
+          <div class="row" id="row-1">
+            <div class="col-0"><canvas class="cell" id="cell-9"></canvas></div>
+            <div class="col-1"><canvas class="cell" id="cell-10"></canvas></div>
+            <div class="col-2"><canvas class="cell" id="cell-11"></canvas></div>
+
+            <div class="col-3"><canvas class="cell" id="cell-12"></canvas></div>
+            <div class="col-4"><canvas class="cell" id="cell-13"></canvas></div>
+            <div class="col-5"><canvas class="cell" id="cell-14"></canvas></div>
+
+            <div class="col-6"><canvas class="cell" id="cell-15"></canvas></div>
+            <div class="col-7"><canvas class="cell" id="cell-16"></canvas></div>
+            <div class="col-8"><canvas class="cell" id="cell-17"></canvas></div>
+          </div>
+
+          <div class="row" id="row-2">
+            <div class="col-0"><canvas class="cell" id="cell-18"></canvas></div>
+            <div class="col-1"><canvas class="cell" id="cell-19"></canvas></div>
+            <div class="col-2"><canvas class="cell" id="cell-20"></canvas></div>
+
+            <div class="col-3"><canvas class="cell" id="cell-21"></canvas></div>
+            <div class="col-4"><canvas class="cell" id="cell-22"></canvas></div>
+            <div class="col-5"><canvas class="cell" id="cell-23"></canvas></div>
+
+            <div class="col-6"><canvas class="cell" id="cell-24"></canvas></div>
+            <div class="col-7"><canvas class="cell" id="cell-25"></canvas></div>
+            <div class="col-8"><canvas class="cell" id="cell-26"></canvas></div>
+          </div>
+
+          <div class="row" id="row-3">
+            <div class="col-0"><canvas class="cell" id="cell-27"></canvas></div>
+            <div class="col-1"><canvas class="cell" id="cell-28"></canvas></div>
+            <div class="col-2"><canvas class="cell" id="cell-29"></canvas></div>
+
+            <div class="col-3"><canvas class="cell" id="cell-30"></canvas></div>
+            <div class="col-4"><canvas class="cell" id="cell-31"></canvas></div>
+            <div class="col-5"><canvas class="cell" id="cell-32"></canvas></div>
+
+            <div class="col-6"><canvas class="cell" id="cell-33"></canvas></div>
+            <div class="col-7"><canvas class="cell" id="cell-34"></canvas></div>
+            <div class="col-8"><canvas class="cell" id="cell-35"></canvas></div>
+          </div>
+
+          <div class="row" id="row-4">
+            <div class="col-0"><canvas class="cell" id="cell-36"></canvas></div>
+            <div class="col-1"><canvas class="cell" id="cell-37"></canvas></div>
+            <div class="col-2"><canvas class="cell" id="cell-38"></canvas></div>
+
+            <div class="col-3"><canvas class="cell" id="cell-39"></canvas></div>
+            <div class="col-4"><canvas class="cell" id="cell-40"></canvas></div>
+            <div class="col-5"><canvas class="cell" id="cell-41"></canvas></div>
+
+            <div class="col-6"><canvas class="cell" id="cell-42"></canvas></div>
+            <div class="col-7"><canvas class="cell" id="cell-43"></canvas></div>
+            <div class="col-8"><canvas class="cell" id="cell-44"></canvas></div>
+          </div>
+
+          <div class="row" id="row-5">
+            <div class="col-0"><canvas class="cell" id="cell-45"></canvas></div>
+            <div class="col-1"><canvas class="cell" id="cell-46"></canvas></div>
+            <div class="col-2"><canvas class="cell" id="cell-47"></canvas></div>
+
+            <div class="col-3"><canvas class="cell" id="cell-48"></canvas></div>
+            <div class="col-4"><canvas class="cell" id="cell-49"></canvas></div>
+            <div class="col-5"><canvas class="cell" id="cell-50"></canvas></div>
+
+            <div class="col-6"><canvas class="cell" id="cell-51"></canvas></div>
+            <div class="col-7"><canvas class="cell" id="cell-52"></canvas></div>
+            <div class="col-8"><canvas class="cell" id="cell-53"></canvas></div>
+          </div>
+
+          <div class="row" id="row-6">
+            <div class="col-0"><canvas class="cell" id="cell-54"></canvas></div>
+            <div class="col-1"><canvas class="cell" id="cell-55"></canvas></div>
+            <div class="col-2"><canvas class="cell" id="cell-56"></canvas></div>
+
+            <div class="col-3"><canvas class="cell" id="cell-57"></canvas></div>
+            <div class="col-4"><canvas class="cell" id="cell-58"></canvas></div>
+            <div class="col-5"><canvas class="cell" id="cell-59"></canvas></div>
+
+            <div class="col-6"><canvas class="cell" id="cell-60"></canvas></div>
+            <div class="col-7"><canvas class="cell" id="cell-61"></canvas></div>
+            <div class="col-8"><canvas class="cell" id="cell-62"></canvas></div>
+          </div>
+
+          <div class="row" id="row-7">
+            <div class="col-0"><canvas class="cell" id="cell-63"></canvas></div>
+            <div class="col-1"><canvas class="cell" id="cell-64"></canvas></div>
+            <div class="col-2"><canvas class="cell" id="cell-65"></canvas></div>
+
+            <div class="col-3"><canvas class="cell" id="cell-66"></canvas></div>
+            <div class="col-4"><canvas class="cell" id="cell-67"></canvas></div>
+            <div class="col-5"><canvas class="cell" id="cell-68"></canvas></div>
+
+            <div class="col-6"><canvas class="cell" id="cell-69"></canvas></div>
+            <div class="col-7"><canvas class="cell" id="cell-70"></canvas></div>
+            <div class="col-8"><canvas class="cell" id="cell-71"></canvas></div>
+          </div>
+
+          <div class="row" id="row-8">
+            <div class="col-0"><canvas class="cell" id="cell-72"></canvas></div>
+            <div class="col-1"><canvas class="cell" id="cell-73"></canvas></div>
+            <div class="col-2"><canvas class="cell" id="cell-74"></canvas></div>
+
+            <div class="col-3"><canvas class="cell" id="cell-75"></canvas></div>
+            <div class="col-4"><canvas class="cell" id="cell-76"></canvas></div>
+            <div class="col-5"><canvas class="cell" id="cell-77"></canvas></div>
+
+            <div class="col-6"><canvas class="cell" id="cell-78"></canvas></div>
+            <div class="col-7"><canvas class="cell" id="cell-79"></canvas></div>
+            <div class="col-8"><canvas class="cell" id="cell-80"></canvas></div>
+          </div>
+        </div>
+      </section>
+      <section class="right">
+        <div class="scoreboard">
+          <h2>Score Board</h2>
+          <h3>
+            Max Points :-
+            <input type="text" class="maxPoints" value="0" disabled />
+          </h3>
+          <h3>
+            Your Score :- <input type="text" class="score" value="0" disabled />
+          </h3>
+        </div>
+        <div class="bottom-box">
+          <div class="difficulty-level">
+            <div class="select-level">
+              <div class="options-list">
+                <div class="option">
+                  <input type="radio" name="category" class="radio" id="L1" />
+                  <label for="L1">Very Easy</label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" name="category" class="radio" id="L2" />
+                  <label for="L2">Easy</label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" name="category" class="radio" id="L3" />
+                  <label for="L3">Medium</label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" name="category" class="radio" id="L4" />
+                  <label for="L4">Hard</label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" name="category" class="radio" id="L5" />
+                  <label for="L5">Very Hard</label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" name="category" class="radio" id="L6" />
+                  <label for="L6">Expert</label>
+                </div>
+              </div>
+
+              <div class="select">
+                <span>Select Difficulty</span>
+                <img class="down-arrow" src="img/downArrow.png" />
+              </div>
             </div>
-        </section>
-        <section class="middle">
-            <div class="grid">
-                <div class="row" id="row-0">
+          </div>
 
-                    <div class="col-0"><canvas class="cell" id="cell-0"></canvas></div>
-                    <div class="col-1"><canvas class="cell" id="cell-1"></canvas></div>
-                    <div class="col-2"><canvas class="cell" id="cell-2"></canvas></div>
+          <div class="bar">
+            <button id="start-game" class="btn">Start Game</button>
+            <button id="reset" class="btn">Reset</button>
+          </div>
 
-                    <div class="col-3"><canvas class="cell" id="cell-3"></canvas></div>
-                    <div class="col-4"><canvas class="cell" id="cell-4"></canvas></div>
-                    <div class="col-5"><canvas class="cell" id="cell-5"></canvas></div>
-
-                    <div class="col-6"><canvas class="cell" id="cell-6"></canvas></div>
-                    <div class="col-7"><canvas class="cell" id="cell-7"></canvas></div>
-                    <div class="col-8"><canvas class="cell" id="cell-8"></canvas></div>
-
-                </div>
-
-                <div class="row" id="row-1">
-
-                    <div class="col-0"><canvas class="cell" id="cell-9"></canvas></div>
-                    <div class="col-1"><canvas class="cell" id="cell-10"></canvas></div>
-                    <div class="col-2"><canvas class="cell" id="cell-11"></canvas></div>
-
-                    <div class="col-3"><canvas class="cell" id="cell-12"></canvas></div>
-                    <div class="col-4"><canvas class="cell" id="cell-13"></canvas></div>
-                    <div class="col-5"><canvas class="cell" id="cell-14"></canvas></div>
-
-                    <div class="col-6"><canvas class="cell" id="cell-15"></canvas></div>
-                    <div class="col-7"><canvas class="cell" id="cell-16"></canvas></div>
-                    <div class="col-8"><canvas class="cell" id="cell-17"></canvas></div>
-
-                </div>
-
-                <div class="row" id="row-2">
-
-                    <div class="col-0"><canvas class="cell" id="cell-18"></canvas></div>
-                    <div class="col-1"><canvas class="cell" id="cell-19"></canvas></div>
-                    <div class="col-2"><canvas class="cell" id="cell-20"></canvas></div>
-
-                    <div class="col-3"><canvas class="cell" id="cell-21"></canvas></div>
-                    <div class="col-4"><canvas class="cell" id="cell-22"></canvas></div>
-                    <div class="col-5"><canvas class="cell" id="cell-23"></canvas></div>
-
-                    <div class="col-6"><canvas class="cell" id="cell-24"></canvas></div>
-                    <div class="col-7"><canvas class="cell" id="cell-25"></canvas></div>
-                    <div class="col-8"><canvas class="cell" id="cell-26"></canvas></div>
-
-                </div>
-
-                <div class="row" id="row-3">
-
-                    <div class="col-0"><canvas class="cell" id="cell-27"></canvas></div>
-                    <div class="col-1"><canvas class="cell" id="cell-28"></canvas></div>
-                    <div class="col-2"><canvas class="cell" id="cell-29"></canvas></div>
-
-                    <div class="col-3"><canvas class="cell" id="cell-30"></canvas></div>
-                    <div class="col-4"><canvas class="cell" id="cell-31"></canvas></div>
-                    <div class="col-5"><canvas class="cell" id="cell-32"></canvas></div>
-
-                    <div class="col-6"><canvas class="cell" id="cell-33"></canvas></div>
-                    <div class="col-7"><canvas class="cell" id="cell-34"></canvas></div>
-                    <div class="col-8"><canvas class="cell" id="cell-35"></canvas></div>
-
-                </div>
-
-                <div class="row" id="row-4">
-
-                    <div class="col-0"><canvas class="cell" id="cell-36"></canvas></div>
-                    <div class="col-1"><canvas class="cell" id="cell-37"></canvas></div>
-                    <div class="col-2"><canvas class="cell" id="cell-38"></canvas></div>
-
-                    <div class="col-3"><canvas class="cell" id="cell-39"></canvas></div>
-                    <div class="col-4"><canvas class="cell" id="cell-40"></canvas></div>
-                    <div class="col-5"><canvas class="cell" id="cell-41"></canvas></div>
-
-                    <div class="col-6"><canvas class="cell" id="cell-42"></canvas></div>
-                    <div class="col-7"><canvas class="cell" id="cell-43"></canvas></div>
-                    <div class="col-8"><canvas class="cell" id="cell-44"></canvas></div>
-
-                </div>
-
-                <div class="row" id="row-5">
-
-                    <div class="col-0"><canvas class="cell" id="cell-45"></canvas></div>
-                    <div class="col-1"><canvas class="cell" id="cell-46"></canvas></div>
-                    <div class="col-2"><canvas class="cell" id="cell-47"></canvas></div>
-
-                    <div class="col-3"><canvas class="cell" id="cell-48"></canvas></div>
-                    <div class="col-4"><canvas class="cell" id="cell-49"></canvas></div>
-                    <div class="col-5"><canvas class="cell" id="cell-50"></canvas></div>
-
-                    <div class="col-6"><canvas class="cell" id="cell-51"></canvas></div>
-                    <div class="col-7"><canvas class="cell" id="cell-52"></canvas></div>
-                    <div class="col-8"><canvas class="cell" id="cell-53"></canvas></div>
-
-                </div>
-
-                <div class="row" id="row-6">
-
-                    <div class="col-0"><canvas class="cell" id="cell-54"></canvas></div>
-                    <div class="col-1"><canvas class="cell" id="cell-55"></canvas></div>
-                    <div class="col-2"><canvas class="cell" id="cell-56"></canvas></div>
-
-                    <div class="col-3"><canvas class="cell" id="cell-57"></canvas></div>
-                    <div class="col-4"><canvas class="cell" id="cell-58"></canvas></div>
-                    <div class="col-5"><canvas class="cell" id="cell-59"></canvas></div>
-
-                    <div class="col-6"><canvas class="cell" id="cell-60"></canvas></div>
-                    <div class="col-7"><canvas class="cell" id="cell-61"></canvas></div>
-                    <div class="col-8"><canvas class="cell" id="cell-62"></canvas></div>
-
-                </div>
-
-                <div class="row" id="row-7">
-
-                    <div class="col-0"><canvas class="cell" id="cell-63"></canvas></div>
-                    <div class="col-1"><canvas class="cell" id="cell-64"></canvas></div>
-                    <div class="col-2"><canvas class="cell" id="cell-65"></canvas></div>
-
-                    <div class="col-3"><canvas class="cell" id="cell-66"></canvas></div>
-                    <div class="col-4"><canvas class="cell" id="cell-67"></canvas></div>
-                    <div class="col-5"><canvas class="cell" id="cell-68"></canvas></div>
-
-                    <div class="col-6"><canvas class="cell" id="cell-69"></canvas></div>
-                    <div class="col-7"><canvas class="cell" id="cell-70"></canvas></div>
-                    <div class="col-8"><canvas class="cell" id="cell-71"></canvas></div>
-
-                </div>
-
-                <div class="row" id="row-8">
-
-                    <div class="col-0"><canvas class="cell" id="cell-72"></canvas></div>
-                    <div class="col-1"><canvas class="cell" id="cell-73"></canvas></div>
-                    <div class="col-2"><canvas class="cell" id="cell-74"></canvas></div>
-
-                    <div class="col-3"><canvas class="cell" id="cell-75"></canvas></div>
-                    <div class="col-4"><canvas class="cell" id="cell-76"></canvas></div>
-                    <div class="col-5"><canvas class="cell" id="cell-77"></canvas></div>
-
-                    <div class="col-6"><canvas class="cell" id="cell-78"></canvas></div>
-                    <div class="col-7"><canvas class="cell" id="cell-79"></canvas></div>
-                    <div class="col-8"><canvas class="cell" id="cell-80"></canvas></div>
-
-                </div>
-            </div>
-        </section>
-        <section class="right">
-            <div class="scoreboard">
-                <h2>Score Board</h2>
-                <h3>Max Points :- <input type="text" class="maxPoints" value="0" disabled></h3>
-                <h3>Your Score :- <input type="text" class="score" value="0" disabled></h3>
-            </div>
-            <div class="bottom-box">
-                <div class="difficulty-level">
-
-                    <div class="select-level">
-                        <div class="options-list">
-
-                            <div class="option">
-                                <input type="radio" name="category" class="radio" id="L1">
-                                <label for="L1">Very Easy</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" name="category" class="radio" id="L2">
-                                <label for="L2">Easy</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" name="category" class="radio" id="L3">
-                                <label for="L3">Medium</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" name="category" class="radio" id="L4">
-                                <label for="L4">Hard</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" name="category" class="radio" id="L5">
-                                <label for="L5">Very Hard</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" name="category" class="radio" id="L6">
-                                <label for="L6">Expert</label>
-                            </div>
-
-                        </div>
-
-                        <div class="select">
-                            Select Difficulty
-                            <img class="down-arrow" src="img/downArrow.png"></img>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="bar">
-                    <button id="start-game" class="btn">Start Game</button>
-                    <button id="reset" class="btn">Reset</button>
-                </div>
-
-                <div class="bar">
-                    <button id="view" class="btn">See Solution</button>
-                    <button id="solve" class="btn">Solve</button>
-                </div>
-
-            </div>
-        </section>
+          <div class="bar">
+            <button id="view" class="btn">See Solution</button>
+            <button id="solve" class="btn">Solve</button>
+          </div>
+        </div>
+      </section>
     </section>
 
     <script src="script/main.js"></script>
-</body>
-
+  </body>
 </html>

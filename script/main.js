@@ -288,7 +288,7 @@ select.addEventListener("click", () => {
 
 option.forEach((o) => {
   o.addEventListener("click", () => {
-    select.innerHTML = o.querySelector("label").innerHTML;
+    select.querySelector("span").innerText = o.querySelector("label").innerText;
     var id = o.querySelector("input").id;
     level = parseInt(id[1]);
     optionList.classList.remove("active");
@@ -297,7 +297,7 @@ option.forEach((o) => {
 
 view = document.querySelector("#view");
 view.addEventListener("click", () => {
-  if (view.innerHTML == "See Solution") {
+  if (view.innerText == "See Solution") {
     for (var i = 0; i < 9; i++) {
       for (var j = 0; j < 9; j++) {
         var cellCanvas = document.getElementById("cell-" + (i * 9 + j)),
@@ -310,9 +310,9 @@ view.addEventListener("click", () => {
         ctx.fillText(solution[i][j], 120, 120);
       }
     }
-    view.innerHTML = "Back";
-  } else if (view.innerHTML == "Back") {
+    view.innerText = "Back";
+  } else if (view.innerText == "Back") {
     resetCells();
-    view.innerHTML = "See Solution";
+    view.innerText = "See Solution";
   }
 });
